@@ -6,7 +6,7 @@ Author: Oleg Volchkov <oleg@volchkov.net>
 
 hljs.LANGUAGES.parser3 = {
   defaultMode: {
-    subLanguage: 'xml',
+    subLanguage: 'html',
     contains: [
       {
         className: 'comment',

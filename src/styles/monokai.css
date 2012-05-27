@@ -12,7 +12,6 @@ pre .params .identifier .keymethods {
 }
 
 pre .tag,
-pre .tag .title,
 pre .keyword,
 pre .literal,
 pre .change,
@@ -37,16 +36,16 @@ pre .class .title {
 
 pre .attribute,
 pre .symbol,
-pre .value,
-pre .regexp {
+pre .value {
 	color: #BF79DB;
 }
 
 pre .tag .value,
 pre .string,
 pre .ruby .subst,
-pre .title,
-pre .haskell .type,
+pre .function .title,
+pre .haskell .label,
+pre .ini .title,
 pre .preprocessor,
 pre .ruby .instancevar,
 pre .ruby .class .parent,
@@ -89,20 +88,21 @@ pre .keyword,
 pre .literal,
 pre .css .id,
 pre .phpdoc,
-pre .title,
-pre .haskell .type,
+pre .function .title,
+pre .class .title,
+pre .haskell .label,
 pre .vbscript .built_in,
 pre .sql .aggregate,
 pre .rsl .built_in,
 pre .smalltalk .class,
+pre .xml .tag .title,
 pre .diff .header,
 pre .chunk,
 pre .winutils,
 pre .bash .variable,
+pre .lisp .title,
 pre .apache .tag,
-pre .tex .special,
-pre .request,
-pre .status {
+pre .tex .special {
   font-weight: bold;
 }
 

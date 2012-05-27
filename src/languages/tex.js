@@ -7,11 +7,13 @@ Website: http://fulc.ru/
 hljs.LANGUAGES.tex = function() {
   var COMMAND1 = {
     className: 'command',
-    begin: '\\\\[a-zA-Zа-яА-я]+[\\*]?'
+    begin: '\\\\[a-zA-Zа-яА-я]+[\\*]?',
+    relevance: 10
   };
   var COMMAND2 = {
     className: 'command',
-    begin: '\\\\[^a-zA-Zа-яА-я0-9]'
+    begin: '\\\\[^a-zA-Zа-яА-я0-9]',
+    relevance: 0
   };
   var SPECIAL = {
     className: 'special',

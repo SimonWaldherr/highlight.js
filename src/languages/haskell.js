@@ -4,8 +4,8 @@ Author: Jeremy Hull <sourdrums@gmail.com>
 */
 
 hljs.LANGUAGES.haskell = function(){
-  var TYPE = {
-    className: 'type',
+  var LABEL = {
+    className: 'label',
     begin: '\\b[A-Z][\\w\']*',
     relevance: 0
   };
@@ -13,29 +13,25 @@ hljs.LANGUAGES.haskell = function(){
     className: 'container',
     begin: '\\(', end: '\\)',
     contains: [
-      {className: 'type', begin: '\\b[A-Z][\\w]*(\\((\\.\\.|,|\\w+)\\))?'},
+      {className: 'label', begin: '\\b[A-Z][\\w\\(\\)\\.\']*'},
       {className: 'title', begin: '[_a-z][\\w\']*'}
     ]
   };
-  var CONTAINER2 = {
-    className: 'container',
-    begin: '{', end: '}',
-    contains: CONTAINER.contains
-  }
 
   return {
     defaultMode: {
-      keywords:
-        'let in if then else case of where do module import hiding qualified type data ' +
-        'newtype deriving class instance not as foreign ccall safe unsafe',
+      keywords: {
+        'keyword': {
+          'let': 1, 'in': 1, 'if': 1, 'then': 1, 'else': 1, 'case': 1, 'of': 1,
+          'where': 1, 'do': 1, 'module': 1, 'import': 1, 'hiding': 1,
+          'qualified': 1, 'type': 1, 'data': 1, 'newtype': 1, 'deriving': 1,
+          'class': 1, 'instance': 1, 'null': 1, 'not': 1, 'as': 1
+        }
+      },
       contains: [
         {
           className: 'comment',
           begin: '--', end: '$'
-        },
-        {
-          className: 'preprocessor',
-          begin: '{-#', end: '#-}'
         },
         {
           className: 'comment',
@@ -51,35 +47,27 @@ hljs.LANGUAGES.haskell = function(){
         {
           className: 'import',
           begin: '\\bimport', end: '$',
-          keywords: 'import qualified as hiding',
-          contains: [CONTAINER],
-          illegal: '\\W\\.|;'
+          keywords: {'import': 1, 'qualified': 1, 'as': 1, 'hiding': 1},
+          contains: [CONTAINER]
         },
         {
           className: 'module',
           begin: '\\bmodule', end: 'where',
-          keywords: 'module where',
-          contains: [CONTAINER],
-          illegal: '\\W\\.|;'
+          keywords: {'module': 1, 'where': 1},
+          contains: [CONTAINER]
         },
         {
           className: 'class',
-          begin: '\\b(class|instance)', end: 'where',
-          keywords: 'class where instance',
-          contains: [TYPE]
-        },
-        {
-          className: 'typedef',
-          begin: '\\b(data|(new)?type)', end: '$',
-          keywords: 'data type newtype deriving',
-          contains: [TYPE, CONTAINER, CONTAINER2]
+          begin: '\\b(class|instance|data|(new)?type)', end: '(where|$)',
+          keywords: {'class': 1, 'where': 1, 'instance': 1,'data': 1,'type': 1,'newtype': 1, 'deriving': 1},
+          contains: [LABEL]
         },
         hljs.C_NUMBER_MODE,
         {
           className: 'shebang',
           begin: '#!\\/usr\\/bin\\/env\ runhaskell', end: '$'
         },
-        TYPE,
+        LABEL,
         {
           className: 'title', begin: '^[_a-z][\\w\']*'
         }

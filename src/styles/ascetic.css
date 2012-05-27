@@ -40,9 +40,6 @@ pre .winutils,
 pre .flow,
 pre .lisp .title,
 pre .apache .tag,
-pre .tex .command,
-pre .http .title,
-pre .request,
-pre .status {
+pre .tex .command {
   font-weight: bold;
 }

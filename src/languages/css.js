@@ -37,16 +37,16 @@ hljs.LANGUAGES.css = function() {
           className: 'at_rule',
           begin: '@(font-face|page)',
           lexems: '[a-z-]+',
-          keywords: 'font-face page'
+          keywords: {'font-face': 1, 'page': 1}
         },
         {
           className: 'at_rule',
           begin: '@', end: '[{;]', // at_rule eating first "{" is a good thing
-                                   // because it doesn’t let it to be parsed as
+                                   // because it doesn't let it to be parsed as
                                    // a rule set but instead drops parser into
                                    // the defaultMode which is how it should be.
           excludeEnd: true,
-          keywords: 'import page media charset',
+          keywords: {'import': 1, 'page': 1, 'media': 1, 'charset': 1},
           contains: [
             FUNCTION,
             hljs.APOS_STRING_MODE, hljs.QUOTE_STRING_MODE,

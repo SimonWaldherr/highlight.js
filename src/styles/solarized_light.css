@@ -13,7 +13,6 @@ pre .comment,
 pre .template_comment,
 pre .diff .header,
 pre .doctype,
-pre .pi,
 pre .lisp .string,
 pre .javadoc {
   color: #93a1a1;
@@ -21,12 +20,13 @@ pre .javadoc {
 }
 
 pre .keyword,
+pre .css .rule .keyword,
 pre .winutils,
+pre .javascript .title,
 pre .method,
 pre .addition,
 pre .css .tag,
-pre .request,
-pre .status {
+pre .lisp .title {
   color: #859900;
 }
 
@@ -43,13 +43,14 @@ pre .hexcolor {
 
 pre .title,
 pre .localvars,
+pre .function .title,
 pre .chunk,
 pre .decorator,
 pre .builtin,
 pre .built_in,
+pre .lisp .title,
 pre .identifier,
 pre .title .keymethods,
-pre .vhdl .literal,
 pre .id {
   color: #268bd2;
 }
@@ -62,12 +63,12 @@ pre .smalltalk .number,
 pre .constant,
 pre .class .title,
 pre .parent,
-pre .haskell .type {
+pre .haskell .label {
   color: #b58900;
 }
 
 pre .preprocessor,
-pre .preprocessor .keyword,
+pre .pi,
 pre .shebang,
 pre .symbol,
 pre .diff .change,

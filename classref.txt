@@ -150,14 +150,6 @@ Django ("django"):
   filter           filter from "|" till the next filter or the end of tag
   argument         filter argument
 
-JSON ("json"):
-
-  number           number
-  literal          "true", "false" and "null"
-  string           string value
-  attribute        name of an object property
-  value            value of an object property
-
 JavaScript ("javascript"):
 
   keyword          keyword
@@ -182,23 +174,6 @@ CoffeeScript ("coffeescript"):
   title            name of a function variable inside a header
   params           parentheses and everything inside them in a function's header
 
-ActionScript ("actionscript"):
-
-  comment          comment
-  string           string
-  number           number
-  keyword          keywords
-  literal          literal
-  reserved         reserved keyword
-  title            name of declaration (package, class or function)
-  preprocessor     preprocessor directive (import, include)
-  type             type of returned value (for functions)
-  package          package (named or not)
-  class            class/interface
-  function         function
-  param            params of function
-  rest_arg         rest argument of function
-
 VBScript ("vbscript"):
 
   keyword          keyword
@@ -206,14 +181,6 @@ VBScript ("vbscript"):
   string           string
   comment          comment
   built_in         built-in function
-
-HTTP ("http"):
-
-  request          first line of a request
-  status           first line of a response
-  attribute        header name
-  string           header value or query string in a request line
-  number           status code
 
 Lua ("lua"):
 
@@ -269,7 +236,6 @@ Objective C ("objectivec"):
   comment          comment
   preprocessor     preprocessor directive
   class            interface/implementation, protocol and forward class declaration
-  variable         properties and struct accesors
 
 Vala ("vala"):
 
@@ -288,15 +254,6 @@ C# ("cs"):
   string           string
   comment          commment
   xmlDocTag        xmldoc tag ("///", "<!--", "-->", "<..>")
-
-D language ("d"):
-
-  comment          comment
-  string           string constant
-  number           number
-  keyword          language keywords (including @attributes)
-  constant         true false null
-  built_in         built-in plain types (int, string etc.)
 
 RenderMan RSL ("rsl"):
 
@@ -461,8 +418,6 @@ VHDL ("vhdl")
   string           string
   comment          commment
   literal          signal logical value
-  typename         typename
-  attribute        signal attribute
 
 Parser3 ("parser3"):
 
@@ -485,13 +440,13 @@ TeX ("tex"):
 Haskell ("haskell"):
 
   keyword          keyword
+  built_in         built-in typeclass/functions (Bool, Int)
   number           number
   string           string
   comment          comment
   class            type classes and other data types
   title            function name
-  type             type class name
-  typedef          definition of types (type, newtype, data)
+  label            type class name
 
 Erlang ("erlang"):
 
@@ -513,6 +468,23 @@ Rust ("rust"):
   keyword          keyword
   title            name of declaration
   preprocessor     preprocessor directive
+  
+ActionScript ("actionscript"):
+
+  comment          comment
+  string           string
+  number           number
+  keyword          keywords
+  literal          literal
+  reserved         reserved keyword
+  title            name of declaration (package, class or function)
+  preprocessor     preprocessor directive (import, include)
+  type             type of returned value (for functions)
+  package          package (named or not)
+  class            class/interface
+  function         function
+  param            params of function
+  rest_arg         rest argument of function
 
 Matlab ("matlab"):
 
@@ -523,12 +495,3 @@ Matlab ("matlab"):
   title            function name
   function         function
   param            params of function
-
-R ("r"):
-
-  comment          comment
-  string           string constant
-  number           number
-  keyword          language keywords (function, if) plus "structural"
-                   functions (attach, require, setClass)
-  literal          special literal: TRUE, FALSE, NULL, NA, etc.

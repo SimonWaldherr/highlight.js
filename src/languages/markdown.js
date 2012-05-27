@@ -21,8 +21,7 @@ hljs.LANGUAGES.markdown = {
       // inline html
       {
         begin: '<', end: '>',
-        subLanguage: 'xml',
-        relevance: 0
+        subLanguage: 'xml'
       },
       // lists (indicators only)
       {
@@ -37,12 +36,7 @@ hljs.LANGUAGES.markdown = {
       // emphasis segments
       {
         className: 'emphasis',
-        begin: '\\*.+?\\*'
-      },
-      {
-        className: 'emphasis',
-        begin: '_.+?_',
-        relevance: 0
+        begin: '[*_].+?[*_]'
       },
       // blockquotes
       {

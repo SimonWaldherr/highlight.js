@@ -88,8 +88,7 @@ pre .nginx .built_in,
 pre .tex .formula,
 pre .erlang_repl .reserved,
 pre .input_number,
-pre .markdown .link_label,
-pre .vhdl .attribute {
+pre .markdown .link_label {
   color: #88F
 }
 
@@ -109,9 +108,7 @@ pre .bash .variable,
 pre .apache .tag,
 pre .go .typename,
 pre .tex .command,
-pre .markdown .strong,
-pre .request,
-pre .status {
+pre .markdown .strong {
   font-weight: bold;
 }
 

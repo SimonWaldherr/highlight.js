@@ -23,7 +23,7 @@ hljs.LANGUAGES.profile = {
       {
         className: 'header',
         begin: '(ncalls|tottime|cumtime)', end: '$',
-        keywords: 'ncalls tottime|10 cumtime|10 filename',
+        keywords: {'ncalls': 1, 'tottime': 10, 'cumtime': 10, 'filename': 1},
         relevance: 10
       },
       {

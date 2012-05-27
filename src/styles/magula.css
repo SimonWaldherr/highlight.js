@@ -93,9 +93,8 @@ pre .winutils,
 pre .bash .variable,
 pre .apache .tag,
 pre .xml .tag,
-pre .tex .command,
-pre .request,
-pre .status {
+pre .xml .title,
+pre .tex .command {
   font-weight: bold;
   color: navy;
 }

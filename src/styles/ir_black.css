@@ -16,12 +16,12 @@ pre .javadoc {
 
 pre .keyword,
 pre .tag,
-pre .tex .command,
-pre .request,
-pre .status {
+pre .ruby .function .keyword,
+pre .tex .command {
   color: #96CBFE;
 }
 
+pre .function .keyword,
 pre .sub .keyword,
 pre .method,
 pre .list .title {
@@ -46,12 +46,17 @@ pre .regexp {
   color: #E9C062;
 }
 
-pre .title,
+pre .function .title,
 pre .sub .identifier,
 pre .pi,
 pre .decorator,
-pre .tex .special,
-pre .haskell .type,
+pre .ini .title,
+pre .tex .special {
+  color: #FFFFB6;
+}
+
+pre .class .title,
+pre .haskell .label,
 pre .constant,
 pre .smalltalk .class,
 pre .javadoctag,

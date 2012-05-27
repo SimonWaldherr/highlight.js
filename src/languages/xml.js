@@ -69,9 +69,10 @@ hljs.LANGUAGES.xml = function(){
           by hljs.subMode() that tests lexems outside the stream.
           */
           begin: '<style(?=\\s|>|$)', end: '>',
-          keywords: {title: 'style'},
+          keywords: {'title': {'style': 1}},
           contains: [TAG_INTERNALS],
           starts: {
+            className: 'css',
             end: '</style>', returnEnd: true,
             subLanguage: 'css'
           }
@@ -80,14 +81,16 @@ hljs.LANGUAGES.xml = function(){
           className: 'tag',
           // See the comment in the <style tag about the lookahead pattern
           begin: '<script(?=\\s|>|$)', end: '>',
-          keywords: {title: 'script'},
+          keywords: {'title': {'script': 1}},
           contains: [TAG_INTERNALS],
           starts: {
+            className: 'javascript',
             end: '</script>', returnEnd: true,
             subLanguage: 'javascript'
           }
         },
         {
+          className: 'vbscript',
           begin: '<%', end: '%>',
           subLanguage: 'vbscript'
         },
